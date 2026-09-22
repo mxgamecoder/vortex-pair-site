@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">✦</div>
+      <h1>Vortex</h1>
+      <p>Pair code generator</p>
+    </header>
+
+    <section class="card">
+      <div class="steps">
+        <div class="step active" id="step1">
+          <span class="step-num">1</span>
+          <span class="step-label">Phone</span>
+        </div>
+        <div class="step" id="step2">
+          <span class="step-num">2</span>
+          <span class="step-label">Code</span>
+        </div>
+        <div class="step" id="step3">
+          <span class="step-num">3</span>
+          <span class="step-label">Link</span>
+        </div>
+      </div>
+
+      <div id="phase-input">
+        <label for="phone">WhatsApp number</label>
+        <div class="input-wrap">
+          <span>+</span>
+          <input type="tel" id="phone" placeholder="27123456789" autocomplete="tel" inputmode="numeric">
+        </div>
+        <p class="helper">Use your country code. No spaces or dashes.</p>
+        <button class="btn primary" id="btnGenerate" onclick="generatePair()">Generate Pair Code</button>
+      </div>
+
+      <div id="phase-pairing" class="hidden">
+        <div class="pair-box">
+          <div class="pair-label">Pair code</div>
+          <div class="pair-code" id="pairCode">······</div>
+          <div class="pair-help">Open WhatsApp → Linked Devices → Link a Device and enter this code.</div>
+        </div>
+        <div class="status-row">
+          <span class="spinner"></span>
+          <span id="pairingStatus">Waiting for connection…</span>
+        </div>
+        <button class="btn ghost" onclick="cancelPairing()">Cancel</button>
+      </div>
+
+      <div id="phase-session" class="hidden">
+        <div class="success-box">
+          <strong>Connected.</strong>
+          <p id="sessionStatus">The session has been sent to your paired WhatsApp number.</p>
+          <div class="link-row">
+            <a href="https://github.com/mxgamecoder" target="_blank" rel="noreferrer">GitHub</a>
+            <span>·</span>
+            <a href="https://lumorapp.app" target="_blank" rel="noreferrer">lumorapp.app</a>
+          </div>
+        </div>
+        <button class="btn ghost" onclick="resetAll()">Generate Again</button>
+      </div>
+
+      <div id="errorBox" class="hidden">
+        <div class="alert" id="errorText"></div>
+        <button class="btn ghost" onclick="resetAll()">Try Again</button>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <div class="toast" id="toast">Done</div>
+  <script src="script.js"></script>
+</body>
+</html>

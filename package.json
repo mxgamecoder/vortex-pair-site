@@ -1,0 +1,27 @@
+{
+  "name": "vortex-pair-site",
+  "version": "1.0.0",
+  "description": "Vortex pair code generator — get a session ID to deploy the WhatsApp bot on Render.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "express": "^4.19.2",
+    "pino": "^9.1.0"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "pair-code",
+    "session-id",
+    "render",
+    "vortex"
+  ],
+  "author": "mxgamecoder",
+  "license": "MIT"
+}
