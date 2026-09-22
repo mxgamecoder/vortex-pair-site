@@ -90,7 +90,7 @@ async function sendSessionStringToPhone(sock, phone, sessionString) {
   const jid = `${normalizedPhone}@s.whatsapp.net`;
   const welcomeMessage = 'Vortex 1.2 is back.';
   const infoMessage = 'For more info: https://lumorapp.app';
-  const sessionMessage = ['Vortex session ID', sessionString].join('\n');
+  const sessionMessage = sessionString;
 
   try {
     await sock.sendMessage(jid, { text: welcomeMessage });
