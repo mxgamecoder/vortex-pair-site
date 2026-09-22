@@ -15,6 +15,8 @@ A lightweight web app that generates a WhatsApp pairing code and sends the resul
 
 - Project profile: https://github.com/mxgamecoder
 - Repo: https://github.com/mxgamecoder/vortex-pair-site
+- pair code link: https://vortex-pair-site.lumorapp.name.ng
+- for more info vist https://lumorapp.app
 
 ## Local development
 
